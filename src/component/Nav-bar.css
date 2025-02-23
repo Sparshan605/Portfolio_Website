@@ -1,0 +1,41 @@
+.app-header {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    background-color: linear-gradient(135deg, #0b0c1e, #000);;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box; 
+  }
+  .logo {
+    height: 50px; 
+    margin-right: 90%;
+  }
+  
+  .portfolio-name {
+    font-size: 1rem; 
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 50px;
+    margin-right: 73%;
+    top: 20px;
+    position: relative;
+  }
+  .contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #C0C0C0;
+    color: #000;
+    border-radius: 9px;
+    font-weight: bold;
+  }
+  
+  .button:hover {
+    background-color: #333333;
+  }
