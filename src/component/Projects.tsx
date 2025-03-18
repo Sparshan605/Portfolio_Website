@@ -5,6 +5,7 @@ import image2 from "../assets/web_s.png";
 import image3 from "../assets/train-titanic.png";
 import image4 from "../assets/EDA.png";
 
+
 interface Box {
   id: number;
   img: string;
@@ -24,6 +25,7 @@ const Projects: React.FC = () => {
     {
       id: 1,
       img: image1,
+      
       description:
         "<strong>Dynamic Website</strong> <br> I made a dynamic website as part of a high school assignment to demonstrate my proficiency with HTML, CSS, and JavaScript. The project involved incorporating features like user login and navigation to improve user experience.",
     },
@@ -69,5 +71,6 @@ const Projects: React.FC = () => {
     </div>
   );
 };
+
 
 export default Projects;
