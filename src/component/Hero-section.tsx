@@ -32,30 +32,32 @@ export default function Herosection() {
     const letters = text.split("");
 
     return (
-        <section className="Hero-Section">
+        <div>
             <ShootingStarsBackground />
-            <div className="Hero-Content">
-                <div className="Hero-Txt">
-                    <h1>
-                        {letters.map((letter, index) => (
-                            <motion.span
-                                key={index}
-                                className="letter"
-                                style={{
-                                    x: smoothX,
-                                    y: smoothY,
-                                }}
-                            >
-                                {letter === " " ? "\u00A0" : letter}
-                            </motion.span>
-                        ))}
-                    </h1>
-                    <div className="Location">
-                        <img src="src/assets/loc-icon.png" alt="Location Icon" className="location-icon" />
-                        <span className="address">Calgary, Canada</span>
+            <section className="Hero-Section">
+                <div className="Hero-Content">
+                    <div className="Hero-Txt">
+                        <h1>
+                            {letters.map((letter, index) => (
+                                <motion.span
+                                    key={index}
+                                    className="letter"
+                                    style={{
+                                        x: smoothX,
+                                        y: smoothY,
+                                    }}
+                                >
+                                    {letter === " " ? "\u00A0" : letter}
+                                </motion.span>
+                            ))}
+                        </h1>
+                        <div className="Location">
+                            <img src="src/assets/loc-icon.png" alt="Location Icon" className="location-icon" />
+                            <span className="address">Calgary, Canada</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>    
     );
 }
