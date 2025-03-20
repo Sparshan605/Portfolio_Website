@@ -51,6 +51,9 @@ export default function Herosection() {
                                 </motion.span>
                             ))}
                         </h1>
+                        <div className="desc">
+                            <p>I identify as a passionate Data science student currently pursuing my studies at SAIT.</p>
+                        </div>
                         <div className="Location">
                             <img src="src/assets/loc-icon.png" alt="Location Icon" className="location-icon" />
                             <span className="address">Calgary, Canada</span>

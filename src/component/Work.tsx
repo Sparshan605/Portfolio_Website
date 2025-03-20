@@ -29,22 +29,22 @@ const Work: React.FC = () => {
   ];
 
   return (
-    <div className="title">
+    <section className="work">
       <h1>{title}</h1>
-      <div className="projectbox">
+      <div className="box">
         {boxes.map((box) => (
           <div
             key={box.id}
             className={`box ${hoveredId === box.id ? "hovered" : ""}`}
             onMouseEnter={() => setHoveredId(box.id)}
             onMouseLeave={() => setHoveredId(null)}
-          >
+          >S
             <img src={box.img} alt={`Image ${box.id}`} />
             <p dangerouslySetInnerHTML={{ __html: box.description }} />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -14,11 +14,13 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='main'>
       <Navbar />
       <Herosection />
+      <div className='main_body'>
       <Work />
       <Projects />
+      </div>
       <Footer />
       </div>
   );
