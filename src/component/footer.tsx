@@ -1,4 +1,4 @@
-import './footer.css'
+import '/Styles/footer.css'
 import insta from '../assets/insta.png';
 import gmail from'../assets/gmail.png';
 import linkedin from'../assets/linkedin.png';

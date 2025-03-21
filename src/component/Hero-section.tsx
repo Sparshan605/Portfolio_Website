@@ -1,4 +1,4 @@
-import "./Hero-section.css";
+import "/Styles/Hero-section.css";
 import ShootingStarsBackground from "./ShootingStars";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
