@@ -5,6 +5,7 @@ import image2 from "../assets/web_s.png";
 import image3 from "../assets/train-titanic.png";
 import image4 from "../assets/EDA.png";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import AnimatedText from "./animation";
 
 interface Project {
   id: number;
@@ -80,18 +81,6 @@ const Projects: React.FC = () => {
     }
   };
 
-  const titleLetterVariants = {
-    hidden: { y: -20, opacity: 0 },
-    visible: (i: number) => ({
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: i * 0.05,
-        duration: 0.5
-      }
-    })
-  };
-
   const subtitleVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { 
@@ -128,20 +117,18 @@ const Projects: React.FC = () => {
   return (
     <div className="projects-section" ref={sectionRef}>
       <div className="projects-header">
-        <h1 className="projects-title">
-          {Array.from("Projects").map((letter, index) => (
-            <motion.span
-              key={index}
-              className="title-letter"
-              custom={index}
-              variants={titleLetterVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </h1>
+        {/* Apply AnimatedText only to the main "Projects" title */}
+        <AnimatedText 
+          text="Projects" 
+          className="projects-title" 
+          headingType="h1"
+          mouseSensitivityX={0.003}
+          mouseSensitivityY={0.006}
+          staggerDelay={0.06}
+          initialDelay={0.2}
+          springStiffness={120}
+          springDamping={15}
+        />
         
         <motion.p 
           className="projects-subtitle"
@@ -179,12 +166,14 @@ const Projects: React.FC = () => {
               <div className="project-image-container">
                 <img src={project.img} alt={project.title} className="project-image" />
                 <div className="project-overlay">
+                  {/* Keep original h3 for overlay title */}
                   <h3 className="project-overlay-title">{project.title}</h3>
                   <p className="project-overlay-text">Hover to expand</p>
                 </div>
               </div>
               
               <div className="project-info">
+                {/* Keep original h3 for project title */}
                 <h3 className="project-title">{project.title}</h3>
                 
                 <AnimatePresence>
