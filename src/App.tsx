@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './App.css';
+import './Styles/App.css';
 import Navbar from './component/Nav-bar';
 import Herosection from './component/Hero-section';
 import '@fontsource/montserrat/700.css';

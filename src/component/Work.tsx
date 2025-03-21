@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/Styles/Work.css";
+import "../Styles/Work.css";
 import image1 from "../assets/geofinity-logo.png";
 
 
