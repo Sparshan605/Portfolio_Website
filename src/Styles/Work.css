@@ -1,138 +1,155 @@
 .work {
-    text-align: center;
-    margin: 10px 0;
-    background: linear-gradient(135deg, #060713, #000);
-    border: 1px solid rgba(0, 153, 255, 0.30); 
-    box-shadow: 0 0 10px rgba(0, 153, 255, 0.80);
-    position:relative;
-    z-index: 10000000;
-  }
-  
-  .title h1 {
-    font-size: 100px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #fff, #ccc);
-    -webkit-background-clip: text;
-    color: #000; 
-  }
-  
-  .letter {
-    display: inline-block;
-    font-size: inherit;
-    font-weight: 900;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, white, grey);
-    -webkit-background-clip: text;
-    color: #000; /* Ensure text remains visible */
-    margin-top: 4%;
-    font-size: 100px !important;
-  }
-  
-  .title .description {
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, white, grey);
-    -webkit-background-clip: text;
-    margin-bottom: 80px;
-    justify-content: center;
-  }
-/*   
-  .workbox {
-    display: grid;
-    z-index: 1000000;
-    align-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 16px;
-    margin-left: 15%;
-    margin-top: 5%;
-    height: 70%;
-    width: 70%;
+  padding: 5rem 2rem;
+  background-color: #121212;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
 
-  } */
-  
-  /* Base styles for project boxes */
-  .workbox {
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 600px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-    background: rgba(20, 30, 50, 0.8); /* Dark navy with transparency */
-    border: 1px solid rgba(0, 153, 255, 0.2); 
-    box-shadow: 0 0 10px rgba(0, 153, 255, 0.15);
-    color: rgba(255, 255, 255, 0.9);
+.work-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+  font-size: 80px;
+}
+
+.work-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.static-title {
+  opacity: 0.3; /* Dimmed until in view */
+  transition: opacity 0.5s ease;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  opacity: 0.3; /* Dimmed until in view */
+  transition: opacity 0.5s ease;
+}
+
+.work-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.work-card {
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.work-card.hovered {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.work-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+}
+
+.work-info {
+  flex: 1;
+}
+
+.company-name {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0 0 0.2rem 0;
+}
+
+.position {
+  color: #60a5fa;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.period {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.work-card-body {
+  color: #e5e7eb;
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills-container {
+  margin-top: 1rem;
+}
+
+.skills-title {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .work {
+    padding: 4rem 1rem;
   }
   
-  /* Image styles */
-  .workbox img {
-    max-width: 100%;
-    height: 200px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+  .work-title {
+    font-size: 2rem;
   }
   
-  /* Description styling */
-  .workbox p {
-    font-size: 1.3em;
-    font-weight: normal;
-    margin-top: 20px;
-    width: 100%;
-    text-align: justify;
-    transition: opacity 0.3s ease-in-out;
-    color: rgba(255, 255, 255, 0.9);
+  .work-card {
+    padding: 1.2rem;
   }
   
-  .workbox p strong {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
+  .company-logo {
+    width: 50px;
+    height: 50px;
   }
-  
-  /* Hover effect: Enlarging the hovered box */
-  .workbox:hover {
-    transform: scale(1.09);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    background: #fff; 
-    
-  }
-  
-  .workbox:hover .workbox:not(:hover) {
-    transform: scale(0.9);
-    opacity: 0.8;
-  }
-  
-  /* Image zoom-in effect on hover */
-  .workbox:hover img {
-    transform: scale(1.1);
-  }
-  .workbox:hover p{
-    color:#000
-  }
-  .workbox:hover p strong{
-    color:#000
-  }
-  /* Smooth appearance animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .box {
-    animation: fadeIn 0.6s ease-in-out;
-  }
-  
+}
