@@ -18,11 +18,10 @@ const Work: React.FC = () => {
     </span>
   ));
 
-  const boxes: Box[] = [
+  const workboxes: Box[] = [
     {
       id: 1,
       img: image1,
-      
       description:
         "<strong>Dynamic Website</strong> <br> I made a dynamic website as part of a high school assignment to demonstrate my proficiency with HTML, CSS, and JavaScript. The project involved incorporating features like user login and navigation to improve user experience.",
     },
@@ -31,15 +30,15 @@ const Work: React.FC = () => {
   return (
     <section className="work">
       <h1>{title}</h1>
-        {boxes.map((box) => (
+        {workboxes.map((workbox) => (
           <div
-            key={box.id}
-            className={`box ${hoveredId === box.id ? "hovered" : ""}`}
-            onMouseEnter={() => setHoveredId(box.id)}
+            key={workbox.id}
+            className={`workbox ${hoveredId === workbox.id ? "hovered" : ""}`}
+            onMouseEnter={() => setHoveredId(workbox.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
-            <img src={box.img} alt={`Image ${box.id}`} />
-            <p dangerouslySetInnerHTML={{ __html: box.description }} />
+            <img src={workbox.img} alt={`Image ${workbox.id}`} />
+            <p dangerouslySetInnerHTML={{ __html: workbox.description }} />
           </div>
         ))}
     </section>

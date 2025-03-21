@@ -1,35 +1,30 @@
 import "./Hero-section.css";
 import ShootingStarsBackground from "./ShootingStars";
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Herosection() {
-    // Mouse motion values
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
+    // Split text into individual letters
+    const text = "Hi, I'm Sparshan";
+    const letters = text.split("");
 
-    // Smooth motion values
-    const smoothX = useSpring(mouseX, { stiffness: 40, damping: 15 });
-    const smoothY = useSpring(mouseY, { stiffness: 40, damping: 15 });
+    // State to track mouse position
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
-            const { clientX, clientY } = event;
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
 
-            // Set motion values based on mouse movement
-            mouseX.set((clientX - centerX) * 0.03);
-            mouseY.set((clientY - centerY) * 0.03);
+            setMousePosition({
+                x: (event.clientX - centerX) * 0.002, // Higher value for more sensitivity
+                y: (event.clientY - centerY) * 0.009,
+            });
         };
 
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, [mouseX, mouseY]);
-
-    // Split text into individual letters
-    const text = "Hi,I'm Sparshan";
-    const letters = text.split("");
+    }, []);
 
     return (
         <div>
@@ -37,22 +32,30 @@ export default function Herosection() {
             <section className="Hero-Section">
                 <div className="Hero-Content">
                     <div className="Hero-Txt">
-                        <h1>
+                        <h1 style={{ position: "relative" }}>
                             {letters.map((letter, index) => (
                                 <motion.span
                                     key={index}
                                     className="letter"
-                                    style={{
-                                        x: smoothX,
-                                        y: smoothY,
+                                    initial={{ x: 0, y: 0 }}
+                                    animate={{
+                                        x: mousePosition.x * (index % 2 === 0 ? 1 : -1), 
+                                        y: mousePosition.y * (index % 2 === 0 ? -1 : 1),
                                     }}
+                                    transition={{
+                                        
+                                        type: "spring",
+                                        stiffness: 150,
+                                        damping: 25,
+                                    }}
+                                    style={{ display: "inline-block", position: "relative" }}
                                 >
                                     {letter === " " ? "\u00A0" : letter}
                                 </motion.span>
                             ))}
                         </h1>
                         <div className="desc">
-                            <p>I identify as a passionate Data science student currently pursuing my studies at SAIT.</p>
+                            <p>I identify as a passionate Data Science student currently pursuing my studies at SAIT.</p>
                         </div>
                         <div className="Location">
                             <img src="src/assets/loc-icon.png" alt="Location Icon" className="location-icon" />
