@@ -1,5 +1,3 @@
-/* Projects.css - With 400px Box Height */
-
 .projects-section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -44,7 +42,7 @@
 .project-card {
   width: 100%;
   max-width: 100%;
-  height: 400px; /* Set fixed height for each project card */
+  height: 400px; 
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -64,13 +62,13 @@
   flex-direction: row;
   align-items: stretch;
   width: 100%;
-  height: 100%; /* Ensure content wrapper fills the entire card height */
+  height: 100%; 
 }
 
 .project-image-container {
   flex: 1;
   max-width: 50%;
-  height: 400px; /* Match the card height */
+  height: 400px; 
   overflow: hidden;
   position: relative;
 }
@@ -121,9 +119,8 @@
 .project-info {
   flex: 1;
   padding: 2rem;
-  overflow: auto; /* Changed to auto to allow scrolling if content exceeds height */
-  height: 400px; /* Match the card height */
-}
+  height: 400px;
+} 
 
 .project-title {
   font-size: 1.8rem;
@@ -195,7 +192,6 @@
   background-color: #333;
 }
 
-/* Animation for the expansion */
 @keyframes expandProject {
   from {
     transform: scale(1);
@@ -207,24 +203,23 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .project-content-wrapper {
     flex-direction: column;
   }
   
   .project-card {
-    height: auto; /* Allow height to adjust on mobile */
-    min-height: 400px; /* Set minimum height */
+    height: auto; 
+    min-height: 400px; 
   }
   
   .project-image-container {
     max-width: 100%;
-    height: 200px; /* Reduce height on mobile */
+    height: 200px; 
   }
   
   .project-info {
-    height: auto; /* Allow content to determine height */
+    height: auto; 
   }
   
   .projects-title {

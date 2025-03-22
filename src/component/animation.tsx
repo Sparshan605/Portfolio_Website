@@ -42,7 +42,6 @@ const AnimatedText = ({
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseSensitivityX, mouseSensitivityY]);
 
-  // Container variants for staggered letter animations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +53,7 @@ const AnimatedText = ({
     },
   };
 
-  // Letter variants for entry animation
+
   const letterVariants = {
     hidden: {
       opacity: 0,
@@ -66,7 +65,7 @@ const AnimatedText = ({
     },
   };
 
-  // Dynamically choose the heading element type
+
   const HeadingTag = headingType as keyof JSX.IntrinsicElements;
 
   return (
