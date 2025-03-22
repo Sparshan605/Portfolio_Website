@@ -2,6 +2,7 @@ import "../Styles/Hero-section.css";
 import ShootingStarsBackground from "./ShootingStars";
 import { motion } from "framer-motion";
 import AnimatedText from "./animation";
+import locIcon from '../../assets/loc-icon.png';
 
 export default function Herosection() {
     const contentVariants = {
@@ -49,7 +50,7 @@ export default function Herosection() {
                                 delay: 1.4
                             }}
                         >
-                            <img src="../../assets/loc-icon.png" alt="Location Icon" className="location-icon" />
+                            <img src={locIcon} alt="Location Icon" className="location-icon" />
                             <span className="address">Calgary, Canada</span>
                         </motion.div>
                     </div>
