@@ -2,7 +2,7 @@ import "../Styles/Hero-section.css";
 import ShootingStarsBackground from "./ShootingStars";
 import { motion } from "framer-motion";
 import AnimatedText from "./animation";
-import locIcon from '../../assets/loc-icon.png';
+import locIcon from '../assets/loc-icon.png';
 
 export default function Herosection() {
     const contentVariants = {
