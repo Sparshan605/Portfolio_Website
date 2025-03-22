@@ -49,7 +49,7 @@ export default function Herosection() {
                                 delay: 1.4
                             }}
                         >
-                            <img src="src/assets/loc-icon.png" alt="Location Icon" className="location-icon" />
+                            <img src="../../assets/loc-icon.png" alt="Location Icon" className="location-icon" />
                             <span className="address">Calgary, Canada</span>
                         </motion.div>
                     </div>
