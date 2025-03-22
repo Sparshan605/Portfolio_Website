@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/ShootingStars.css';  // Import the CSS file
+import '../Styles/ShootingStars.css';  
 
 const ShootingStarsBackground: React.FC = () => {
   return (

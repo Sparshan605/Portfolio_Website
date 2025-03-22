@@ -23,7 +23,7 @@
 }
 
 .static-title {
-  opacity: 0.3; /* Dimmed until in view */
+  opacity: 0.3; 
   transition: opacity 0.5s ease;
 }
 
@@ -32,7 +32,7 @@
   font-size: 1.1rem;
   margin-top: 0.5rem;
   font-weight: 300;
-  opacity: 0.3; /* Dimmed until in view */
+  opacity: 0.3; 
   transition: opacity 0.5s ease;
 }
 
@@ -134,7 +134,7 @@
   border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .work {
     padding: 4rem 1rem;

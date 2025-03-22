@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import AnimatedText from "./animation";
 
 export default function Herosection() {
-    // Content variants for description and location
     const contentVariants = {
         hidden: { 
             opacity: 0,

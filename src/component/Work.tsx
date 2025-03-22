@@ -2,7 +2,7 @@ import React, { useState,  useRef } from "react";
 import "../Styles/Work.css";
 import image1 from "../assets/geofinity-logo.png";
 import { motion, useInView } from "framer-motion";
-import AnimatedText from "./animation";// Import the AnimatedText component
+import AnimatedText from "./animation";
 
 interface WorkExperience {
   id: number;
@@ -21,7 +21,6 @@ const Work: React.FC = () => {
   const titleRef = useRef<HTMLDivElement>(null);
   const isTitleInView = useInView(titleRef, { once: false, amount: 0.5 });
 
-  // Work experience data
   const workExperiences: WorkExperience[] = [
     {
       id: 1,

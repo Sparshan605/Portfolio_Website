@@ -20,7 +20,6 @@ const Projects: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
 
-  // Enhanced project data with tags and cleaner structure
   const projects: Project[] = [
     {
       id: 1,
@@ -56,7 +55,7 @@ const Projects: React.FC = () => {
     },
   ];
 
-  // Animation variants
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,7 +92,7 @@ const Projects: React.FC = () => {
     }
   };
 
-  // Expanded project variants
+
   const expandedInfoVariants = {
     hidden: { opacity: 0, height: 0, overflow: "hidden" },
     visible: { 
@@ -117,7 +116,6 @@ const Projects: React.FC = () => {
   return (
     <div className="projects-section" ref={sectionRef}>
       <div className="projects-header">
-        {/* Apply AnimatedText only to the main "Projects" title */}
         <AnimatedText 
           text="Projects" 
           className="projects-title" 
@@ -173,7 +171,6 @@ const Projects: React.FC = () => {
               </div>
               
               <div className="project-info">
-                {/* Keep original h3 for project title */}
                 <h3 className="project-title">{project.title}</h3>
                 
                 <AnimatePresence>
