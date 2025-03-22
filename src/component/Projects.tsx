@@ -19,6 +19,9 @@ const Projects: React.FC = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+  // Add titleRef for the Work-style animation
+  const titleRef = useRef<HTMLDivElement>(null);
+  const isTitleInView = useInView(titleRef, { once: false, amount: 0.5 });
 
   const projects: Project[] = [
     {
@@ -87,7 +90,7 @@ const Projects: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        delay: 0.5
+        delay: 0.4 // Same as Work component
       }
     }
   };
@@ -115,24 +118,27 @@ const Projects: React.FC = () => {
 
   return (
     <div className="projects-section" ref={sectionRef}>
-      <div className="projects-header">
-        <AnimatedText 
-          text="Projects" 
-          className="projects-title" 
-          headingType="h1"
-          mouseSensitivityX={0.003}
-          mouseSensitivityY={0.006}
-          staggerDelay={0.06}
-          initialDelay={0.2}
-          springStiffness={120}
-          springDamping={15}
-        />
+      {/* Updated header to match Work component style */}
+      <div className="projects-header" ref={titleRef}>
+        {isTitleInView ? (
+          <AnimatedText 
+            text="My Projects" 
+            headingType="h1"
+            staggerDelay={0.05}
+            initialDelay={0.2}
+            mouseSensitivityX={0.0}
+            mouseSensitivityY={0.0}
+            className="projects-title"
+          />
+        ) : (
+          <h1 className="projects-title static-title">My Projects</h1>
+        )}
         
         <motion.p 
           className="projects-subtitle"
           variants={subtitleVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isTitleInView ? "visible" : "hidden"}
         >
           My portfolio of completed projects
         </motion.p>
@@ -164,7 +170,6 @@ const Projects: React.FC = () => {
               <div className="project-image-container">
                 <img src={project.img} alt={project.title} className="project-image" />
                 <div className="project-overlay">
-                  {/* Keep original h3 for overlay title */}
                   <h3 className="project-overlay-title">{project.title}</h3>
                   <p className="project-overlay-text">Hover to expand</p>
                 </div>
