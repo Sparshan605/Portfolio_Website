@@ -3,11 +3,16 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  background-color: #121212;
+  margin-top: 20%;
+  z-index: 10;
+  position: relative;
 }
 
 .projects-header {
   text-align: center;
   margin-bottom: 3rem;
+  color: #ffffff;
 }
 
 .projects-title {
@@ -25,7 +30,7 @@
 
 .projects-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #fff;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -42,14 +47,15 @@
 .project-card {
   width: 100%;
   max-width: 100%;
-  height: 400px; 
-  background-color: #fff;
-  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 1;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card.hovered {
@@ -68,11 +74,19 @@
 }
 
 .project-image-container {
-  flex: 1;
-  max-width: 50%;
-  height: 400px; 
-  overflow: hidden;
   position: relative;
+  flex: 1;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-right: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1; /* Change from visibility: visible */
 }
 
 .project-image {
@@ -88,21 +102,18 @@
 
 .project-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0rem;
   background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden; 
+  transition: visibility 0.3s ease; 
 }
 
 .project-card:hover .project-overlay {
-  opacity: 1;
+  visibility: visible; /* or display: flex; */
 }
 
 .project-overlay-title {
@@ -121,19 +132,19 @@
 .project-info {
   flex: 1;
   padding: 2rem;
-  height: 400px;
+  height: 300px;
 } 
 
 .project-title {
   font-size: 1.8rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #333;
+  color: #ffffff;
 }
 
 .project-short-description {
   line-height: 1.6;
-  color: #555;
+  color: #fff;
   margin: 0;
 }
 
@@ -145,7 +156,7 @@
 
 .project-description {
   line-height: 1.6;
-  color: #555;
+  color: #fff;
   margin: 0;
 }
 
@@ -212,10 +223,11 @@
   
   .project-card {
     height: auto; 
-    min-height: 400px; 
+    min-height: 300px; 
   }
   
   .project-image-container {
+    position: relative;
     max-width: 100%;
     height: 200px; 
   }

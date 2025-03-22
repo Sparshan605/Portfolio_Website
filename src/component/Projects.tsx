@@ -170,10 +170,10 @@ const Projects: React.FC = () => {
               <div className="project-image-container">
                 <img src={project.img} alt={project.title} className="project-image" />
                 <div className="project-overlay">
-                  <h3 className="project-overlay-title">{project.title}</h3>
-                  <p className="project-overlay-text">Hover to expand</p>
-                </div>
+                <h3 className="project-overlay-title">{project.title}</h3>
+                <p className="project-overlay-text">Hover to expand</p>
               </div>
+            </div>
               
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
