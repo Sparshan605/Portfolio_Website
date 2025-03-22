@@ -171,7 +171,6 @@ const Projects: React.FC = () => {
                 <img src={project.img} alt={project.title} className="project-image" />
                 <div className="project-overlay">
                 <h3 className="project-overlay-title">{project.title}</h3>
-                <p className="project-overlay-text">Hover to expand</p>
               </div>
             </div>
               

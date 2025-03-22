@@ -38,7 +38,7 @@
 .projects-vertical-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 7rem;
   align-items: center;
   perspective: 1000px;
   width: 100%;
@@ -51,11 +51,11 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 1;
-  background-color: rgba(30, 30, 30, 0.8);
+  background:Linear-gradient(135deg, #060713,#000, #000);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card.hovered {
@@ -79,14 +79,13 @@
   object-fit: cover;
   border-radius: 3px;
   margin-right: 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 0.2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover .project-overlay {
-  opacity: 1; /* Change from visibility: visible */
+  opacity: 1; 
 }
 
 .project-image {
