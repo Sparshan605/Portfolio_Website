@@ -17,9 +17,9 @@ interface WorkExperience {
 const Work: React.FC = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const titleRef = useRef<HTMLDivElement>(null);
-  const isTitleInView = useInView(titleRef, { once: false, amount: 0.5 });
+  const isTitleInView = useInView(titleRef, { once: false, amount: 0.08 });
 
   const workExperiences: WorkExperience[] = [
     {
@@ -78,7 +78,7 @@ const Work: React.FC = () => {
             text="Work Experience" 
             headingType="h1"
             staggerDelay={0.05}
-            initialDelay={0.2}
+            initialDelay={0.1}
             mouseSensitivityX={0.0}
             mouseSensitivityY={0.0}
             className="work-title"
