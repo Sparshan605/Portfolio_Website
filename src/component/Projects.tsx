@@ -19,7 +19,6 @@ const Projects: React.FC = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
-  // Add titleRef for the Work-style animation
   const titleRef = useRef<HTMLDivElement>(null);
   const isTitleInView = useInView(titleRef, { once: false, amount: 0.5 });
 
