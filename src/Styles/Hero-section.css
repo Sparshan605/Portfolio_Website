@@ -5,6 +5,7 @@
     padding: 50px 20px;
     height: 100vh;
     overflow: hidden;
+    /* background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%); */
 }
 
 .Hero-Content {
@@ -15,10 +16,12 @@
     width: 100%;
     gap: 20px;
     text-align: center;
+    
 }
 
 .Hero-Txt {
     flex: 1;
+    
 }
 
 .Hero-Txt h1 {
@@ -34,31 +37,23 @@
     font-size: inherit;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #ffffff, #c0c0c0);
+    background: linear-gradient(to right, #fff,#fff,#bbb, #777); /* Soft gray gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    transition: transform 0.2s ease-out;
-    will-change: transform;
-    text-align: center;
-    letter-spacing: 0.02em;
-    filter: drop-shadow(0 0 2px rgba(255,255,255,0.2));
+    transition: transform 0.1s ease-out, text-shadow 0.3s ease-in-out;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
+    opacity: 0.85; 
 }
-
-.letter:hover {
-    transform: translateY(-3px);
-}
-
-.desc {
+.desc{
     display: block;
     font-size: 1.4rem;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #ffffff, #d0d0d0);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 2% auto;
+    margin: 2%;
     text-align: center;
     line-height: 1.6;
     max-width: 800px;
@@ -69,32 +64,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.05);
-    padding: 8px 16px;
-    border-radius: 30px;
-    margin: 15px auto;
-    transition: transform 0.2s ease;
-    max-width: fit-content;
-}
-
-.Location:hover {
-    transform: scale(1.02);
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .location-icon {
-    height: 40px;
-    padding-top: 0px;
-    transform: translateY(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .address {
     font-size: 1.7rem;
-    background: linear-gradient(to right, #ffffff, #e0e0e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding-top: 10px;
-    padding-left: 8px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes fadeIn {

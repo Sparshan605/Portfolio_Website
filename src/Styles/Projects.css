@@ -1,12 +1,11 @@
 .projects-section {
   padding: 4rem 2rem;
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
   width: 100%;
-  background-color: #121212;
-  margin-top: 20%;
   z-index: 10;
   position: relative;
+  margin-top: 5rem;
 }
 
 .projects-header {
@@ -16,7 +15,7 @@
 }
 
 .projects-title {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   display: flex;
@@ -29,7 +28,7 @@
 }
 
 .projects-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #fff;
   max-width: 600px;
   margin: 0 auto;
