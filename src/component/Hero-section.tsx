@@ -38,7 +38,7 @@ export default function Herosection() {
                             initial="hidden"
                             animate="visible"
                         >
-                            <p>I identify as a passionate Data Science student currently pursuing my studies at SAIT.</p>
+                            <p>I am a passionate Data Science student currently pursuing my studies at SAIT.</p>
                         </motion.div>
                         
                         <motion.div 

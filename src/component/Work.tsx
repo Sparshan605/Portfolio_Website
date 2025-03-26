@@ -10,7 +10,7 @@ interface WorkExperience {
   title: string;
   position?: string;
   period?: string;
-  description: string;
+  description: string[];
   skills?: string[];
 }
 
@@ -26,10 +26,12 @@ const Work: React.FC = () => {
       id: 1,
       img: image1,
       title: "Geofinity",
-      position: "Web Developer",
-      period: "Jan 2023 - Present",
-      description:
-        "Developed a dynamic website as part of a high school assignment to demonstrate proficiency with HTML, CSS, and JavaScript. The project incorporated features like user login and navigation to improve user experience.",
+      position: "Frontened Developer",
+      period: "Jun 2024 - Nov 2024",
+      description:[
+        "Development of company's official website (https://geofinity.com.np ",
+        "Designing the company profile, brochures,cards and banners",
+      ],
       skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"]
     },
   ];
@@ -69,6 +71,7 @@ const Work: React.FC = () => {
       }
     }
   };
+
   
   return (
     <section className="work" ref={sectionRef}>
@@ -121,8 +124,12 @@ const Work: React.FC = () => {
             </div>
             
             <div className="work-card-body">
-              <p className="description">{work.description}</p>
-              
+            
+              <ul>
+                {work.description.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
               {work.skills && (
                 <div className="skills-container">
                   <h4 className="skills-title">Skills</h4>
