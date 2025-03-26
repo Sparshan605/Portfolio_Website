@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../Styles/Projects.css";
-import image1 from "../assets/12project.png";
+import image1 from "../assets/Sentiment_st.png";
 import image2 from "../assets/web_s.png";
 import image3 from "../assets/train-titanic.png";
 import image4 from "../assets/EDA.png";
@@ -26,10 +26,10 @@ const Projects: React.FC = () => {
     {
       id: 1,
       img: image1,
-      title: "Dynamic Website",
+      title: "Video Sentiment Analysis",
       description:
-        "A high school assignment demonstrating proficiency with HTML, CSS, and JavaScript. Features include user login and improved navigation for better user experience.",
-      tags: ["HTML", "CSS", "JavaScript", "UI/UX"]
+        "A Data Science & Machine Learning project that analyzes sentiment in video comments. It includes Exploratory Data Analysis (EDA), sentiment classification using NLTK VADER, and a trained Logistic Regression model for improved predictions. The project enables users to upload CSV files containing text data and process sentiment trends efficiently.",
+      tags: ["Python", "NLTK", "Streamlit", "EDA","Data Science & ML"]
     },
     {
       id: 2,
