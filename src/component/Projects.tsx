@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       img: image1,
       title: "Video Sentiment Analysis",
       description:
-        "A Data Science & Machine Learning project that analyzes sentiment in video comments. It includes Exploratory Data Analysis (EDA), sentiment classification using NLTK VADER, and a trained Logistic Regression model for improved predictions. The project enables users to upload CSV files containing text data and process sentiment trends efficiently.",
+        "A Data Science & Machine Learning project that predicts sentiment in provided data. It includes Exploratory Data Analysis (EDA), sentiment classification using NLTK VADER, and a trained Logistic Regression model for improved predictions. The project enables users to upload CSV files containing text data and process sentiment trends efficiently.",
       tags: ["Python", "NLTK", "Streamlit", "EDA","Data Science & ML"]
     },
     {
