@@ -5,14 +5,15 @@
     position: relative;
     width: 100%;
     bottom: 0;
-    background-color: #333;
+    background: linear-gradient(135deg, #060713, #000, #000);
     padding-top: 20px;
+    border-top: 1px solid white;
 }
 .footer-content{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20%;
+    justify-content: center;
 }
 .icon{
     width: 150px;
@@ -36,8 +37,7 @@
     color: white;
     text-align: center;
     justify-content: center;
-    background-color: #333;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
     width: 100%;
   }

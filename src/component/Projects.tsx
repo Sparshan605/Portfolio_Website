@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import "../Styles/Projects.css";
 import image1 from "../assets/Sentiment_st.png";
-import image2 from "../assets/web_s.png";
-import image3 from "../assets/train-titanic.png";
+import image2 from "../assets/Iris_st.png";
+import image3 from "../assets/Web_scapper.png";
 import image4 from "../assets/EDA.png";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import AnimatedText from "./animation";
@@ -34,25 +34,24 @@ const Projects: React.FC = () => {
     {
       id: 2,
       img: image2,
-      title: "Web Scraping",
-      description:
-        "Successfully scraped product listings of monitors, including ratings and product names, using requests and Python packages like BeautifulSoup.",
-      tags: ["Python", "BeautifulSoup", "Web Scraping", "Data Collection"]
+      title: "Classifying Iris to Flowers",
+      description: "A Machine Learning project that uses trained KNeighbors Classifier to categorize iris flowers into three species (Setosa, Versicolor, and Virginica) based on their sepal and petal measurements. The project includes data preprocessing, model training, evaluation metrics, and displayed in streamlit.",
+      tags: ["Python", "Machine Learning", "KNeighbors Classifier", "Scikit-learn", "Data Preprocessing","Streamlit"]
     },
     {
       id: 3,
       img: image3,
-      title: "Data Preprocessing",
+      title: "Web Scrapping",
       description:
-        "Conducted data preprocessing on the Titanic Survivors dataset, managing missing information, standardizing data types, and cleaning the data for analysis.",
-      tags: ["Python", "Pandas", "Data Cleaning", "Analytics"]
+        " A web scraper that extracts Monitor names and total reviews from Amazon search results, saving the data in an Excel file for analysis.The script sends HTTP requests to Amazon, retrieves the search results, and parses the HTML using BeautifulSoup. It extracts product names and review counts from multiple pages while implementing pagination handling. Finally, the collected data is stored in an Excel file using Pandas for further analysis.",
+      tags: ["Python", "BeautifulSoup", "Web Scraping", "Data Collection"]
     },
     {
       id: 4,
       img: image4,
-      title: "Exploratory Data Analysis",
+      title: "Exploratory Data Analysis and Data Preprocessing",
       description:
-        "Performed EDA on the Forbes Richest Athlete dataset, analyzing trends in athlete earnings over time using data visualization tools like Matplotlib and Seaborn.",
+        "Performed EDA on multiple datasets, including Forbes Richest Athletes, USA Citizens' Income, and TikTok Data. Analyzed trends and relationships between dataset columns using data visualization tools like Matplotlib and Seaborn.",
       tags: ["Python", "Matplotlib", "Seaborn", "Data Visualization"]
     },
   ];
