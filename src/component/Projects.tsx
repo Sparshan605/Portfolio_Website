@@ -6,6 +6,8 @@ import image3 from "../assets/Web_scapper.png";
 import image4 from "../assets/EDA.png";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import AnimatedText from "./animation";
+// If using React Router, uncomment the next line
+// import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -13,6 +15,8 @@ interface Project {
   title: string;
   description: string;
   tags: string[];
+  detailsUrl?: string;  // Added for "View Details" button
+  githubUrl?: string;   // Added for "GitHub" button
 }
 
 const Projects: React.FC = () => {
@@ -29,14 +33,18 @@ const Projects: React.FC = () => {
       title: "Video Sentiment Analysis",
       description:
         "A Data Science & Machine Learning project that predicts sentiment in provided data. It includes Exploratory Data Analysis (EDA), sentiment classification using NLTK VADER, and a trained Logistic Regression model for improved predictions. The project enables users to upload CSV files containing text data and process sentiment trends efficiently.",
-      tags: ["Python", "NLTK", "Streamlit", "EDA","Data Science & ML"]
+      tags: ["Python", "NLTK", "Streamlit", "EDA","Data Science & ML"],
+      detailsUrl: "https://social-media-sentiment-dashboard-cpyzp45wopvw3q6hxy3vls.streamlit.app/",
+      githubUrl: "https://github.com/Sparshan605/Social-Media-Sentiment-Dashboard"
     },
     {
       id: 2,
       img: image2,
       title: "Classifying Iris to Flowers",
       description: "A Machine Learning project that uses trained KNeighbors Classifier to categorize iris flowers into three species (Setosa, Versicolor, and Virginica) based on their sepal and petal measurements. The project includes data preprocessing, model training, evaluation metrics, and displayed in streamlit.",
-      tags: ["Python", "Machine Learning", "KNeighbors Classifier", "Scikit-learn", "Data Preprocessing","Streamlit"]
+      tags: ["Python", "Machine Learning", "KNeighbors Classifier", "Scikit-learn", "Data Preprocessing","Streamlit"],
+      detailsUrl: "https://irisapp-qvhq2crsafn48gxhvquonh.streamlit.app/",
+      githubUrl: "https://github.com/Sparshan605/IRis_Streamlit"
     },
     {
       id: 3,
@@ -44,7 +52,9 @@ const Projects: React.FC = () => {
       title: "Web Scrapping",
       description:
         " A web scraper that extracts Monitor names and total reviews from Amazon search results, saving the data in an Excel file for analysis.The script sends HTTP requests to Amazon, retrieves the search results, and parses the HTML using BeautifulSoup. It extracts product names and review counts from multiple pages while implementing pagination handling. Finally, the collected data is stored in an Excel file using Pandas for further analysis.",
-      tags: ["Python", "BeautifulSoup", "Web Scraping", "Data Collection"]
+      tags: ["Python", "BeautifulSoup", "Web Scraping", "Data Collection"],
+      detailsUrl: "",
+      githubUrl: "https://github.com/Sparshan605/web_scrapping"
     },
     {
       id: 4,
@@ -52,7 +62,9 @@ const Projects: React.FC = () => {
       title: "Exploratory Data Analysis and Data Preprocessing",
       description:
         "Performed EDA on multiple datasets, including Forbes Richest Athletes, USA Citizens' Income, and TikTok Data. Analyzed trends and relationships between dataset columns using data visualization tools like Matplotlib and Seaborn.",
-      tags: ["Python", "Matplotlib", "Seaborn", "Data Visualization"]
+      tags: ["Python", "Matplotlib", "Seaborn", "Data Visualization"],
+      detailsUrl: "",
+      githubUrl:  "https://github.com/Sparshan605?tab=repositories"
     },
   ];
 
@@ -88,7 +100,7 @@ const Projects: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        delay: 0.4 // Same as Work component
+        delay: 0.4 
       }
     }
   };
@@ -195,8 +207,23 @@ const Projects: React.FC = () => {
                       </div>
                       
                       <div className="project-actions">
-                        <button className="project-btn">View Details</button>
-                        <button className="project-btn">GitHub</button>
+                        {project.detailsUrl && (
+                          <a href={project.detailsUrl} className="project-btn" target="_blank" rel="noopener noreferrer">StreamLit</a>
+                        )}
+                        
+                        {project.githubUrl && (
+                          <a 
+                            href={project.githubUrl} 
+                            className="project-btn-git" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            GitHub
+                          </a>
+                        )}
+                        {!project.detailsUrl && !project.githubUrl && (
+                          <span className="project-no-links">No links available</span>
+                        )}
                       </div>
                     </motion.div>
                   ) : (

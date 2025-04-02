@@ -192,9 +192,9 @@
 
 .project-btn {
   padding: 0.5rem 1rem;
-  background-color: #3a86ff;
-  color: white;
-  border: none;
+  background-color: inherit;
+  color: red;
+  border:1px solid red;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
@@ -202,16 +202,28 @@
 }
 
 .project-btn:hover {
-  background-color: #2563eb;
+  background-color: red;
+  color: white;
+  border:white;
   transform: translateY(-2px);
 }
 
-.project-btn:nth-child(2) {
-  background-color: #555;
+.project-btn-git {
+  background-color: #333;
+  border: white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border:1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-.project-btn:nth-child(2):hover {
-  background-color: #333;
+.project-btn-git:hover {
+  background-color: white;
+  color: #9966CC;
+  border: #9966CC;
 }
 
 @keyframes expandProject {
