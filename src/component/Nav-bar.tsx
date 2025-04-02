@@ -8,9 +8,9 @@ function Navbar (){
         <img src={logo} alt="Logo" className="logo" />
         </a>
         <span className="portfolio-name">Sparshan Koirala</span>
-      <div className="contact-info">
+      {/* <div className="contact-info">
         <a href="#" className="button">Contact Info</a>
-      </div>
+      </div> */}
     </header>
   );
 }

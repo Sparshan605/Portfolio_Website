@@ -8,18 +8,18 @@
     width: 90%;
     z-index: 100;
     box-sizing: border-box; 
+    line-height: 2;
   }
   .logo {
     height: 50px; 
-    margin-right: 90%;
   }
   
   .portfolio-name {
-    font-size: 1rem; 
+    font-size: 1.4rem; 
     font-weight: bold;
     color: #fff;
     padding-bottom: 50px;
-    top: 20px;
+    top: 25px;
     position: relative;
   }
   .contact-info {
