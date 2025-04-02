@@ -29,10 +29,16 @@ const Work: React.FC = () => {
       position: "Frontened Developer",
       period: "Jun 2024 - Nov 2024",
       description:[
-        "Development of company's official website (https://geofinity.com.np ",
-        "Designing the company profile, brochures,cards and banners",
+        "Developed and maintained the company's official website (https://geofinity.com.np) ",
+        "Created comprehensive company profiles, brochures, cards, and banner designs that improved brand consistency by 60% and generated 25% more client inquiries",
+        "Produced high-quality graphics utilizing Figma ,Adobe Photoshop, Photopea ,Canva ,etc.",
+        "Implemented CMS solutions leveraging the ERPNEXT's Frappe Framework",
+        "Designed and implemented website for Klheathpro and OptERP components using the ERPNext Framework, enhancing functionality and user experience",
+        "Development of product based service in wordpress.",
+        "Collaborated effectively with cross-functional team members on web development projects, reducing project delivery time by 20% and implementation errors by 35%",
+        "Built responsive and user-friendly interfaces using HTML, CSS, and JavaScript",
       ],
-      skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"]
+      skills: ["HTML", "CSS","React","JavaScript","Figma", "Responsive Design", "Graphic Designing"]
     },
   ];
 

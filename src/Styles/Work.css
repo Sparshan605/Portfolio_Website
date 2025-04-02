@@ -1,13 +1,11 @@
 .work {
   padding: 5rem 2rem;
-  /* background-color: #121212; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
   position: relative;
-  /* background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%); */
 }
 
 .work-header {
@@ -42,7 +40,7 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 90%;
   /* background:Linear-gradient(135deg, #060713,#000, #000);  */
 }
 
