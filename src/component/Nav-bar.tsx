@@ -9,7 +9,7 @@ function Navbar (){
         </a>
         <span className="portfolio-name">Sparshan Koirala</span>
       <div className="contact-info">
-        <a href="" className="button">Contact Info</a>
+        <a href="#" className="button">Contact Info</a>
       </div>
     </header>
   );
