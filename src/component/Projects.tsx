@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
       description:
         "A Data Science & Machine Learning project that predicts sentiment in provided data. It includes Exploratory Data Analysis (EDA), sentiment classification using NLTK VADER, and a trained Logistic Regression model for improved predictions. The project enables users to upload CSV files containing text data and process sentiment trends efficiently.",
       tags: ["Python", "NLTK", "Streamlit", "EDA","Data Science & ML"],
-      detailsUrl: "https://social-media-sentiment-dashboard-cpyzp45wopvw3q6hxy3vls.streamlit.app/",
+      detailsUrl: "https://sentiment-dashboards.streamlit.app/",
       githubUrl: "https://github.com/Sparshan605/Social-Media-Sentiment-Dashboard"
     },
     {
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       title: "Classifying Iris to Flowers",
       description: "A Machine Learning project that uses trained KNeighbors Classifier to categorize iris flowers into three species (Setosa, Versicolor, and Virginica) based on their sepal and petal measurements. The project includes data preprocessing, model training, evaluation metrics, and displayed in streamlit.",
       tags: ["Python", "Machine Learning", "KNeighbors Classifier", "Scikit-learn", "Data Preprocessing","Streamlit"],
-      detailsUrl: "https://irisapp-qvhq2crsafn48gxhvquonh.streamlit.app/",
+      detailsUrl: "https://iris-predic.streamlit.app/",
       githubUrl: "https://github.com/Sparshan605/IRis_Streamlit"
     },
     {
