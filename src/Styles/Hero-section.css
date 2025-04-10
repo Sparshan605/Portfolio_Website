@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
-    height: 100vh;
+    padding: 5vh 5vw;
+    min-height: 100vh;
+    width: calc(100% - 40px);
     overflow: hidden;
-    /* background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%); */
+    position: relative;
+    /* Using viewport units for padding to scale with screen size */
 }
 
 .Hero-Content {
@@ -13,53 +15,49 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    gap: 20px;
-    text-align: center;
-    
+    max-width: 1200px; /* Prevents excessive stretching on ultra-wide screens */
+    gap: clamp(10px, 2vw, 20px); /* Responsive gap that scales with viewport width */
+    text-align: center; 
+    width: calc(100% - 40px);
+
 }
 
 .Hero-Txt {
-    flex: 1;
-    
+    width: 100%;
 }
 
 .Hero-Txt h1 {
-    margin: 0; 
-    line-height: 1.3;
-    font-size: 120px;
-    /* display: flex;
-    justify-content: center;  */
+    margin: 0;
+    line-height: 1.1;
+    font-size: clamp(40px, 10vw, 120px); /* Responsive font size using clamp */
 }
 
 .letter {
     display: inline-block;
-    font-size: inherit;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #fff,#fff,#bbb, #777); /* Soft gray gradient */
+    background: linear-gradient(to right, #fff, #fff, #bbb, #777);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transition: transform 0.1s ease-out, text-shadow 0.3s ease-in-out;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
-    opacity: 0.85; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.85;
 }
-.desc{
+
+.desc {
     display: block;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2.5vw, 1.4rem); /* Responsive font size */
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 2%;
+    margin: 2% auto;
     text-align: center;
     line-height: 1.6;
-    /* max-width: 800px; */
+    max-width: 90%; /* Limit width on large screens */
     animation: fadeIn 1s ease-in-out;
-    margin-left: 1.6%;
-
 }
 
 .Location {
@@ -67,7 +65,8 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 3vh;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 .location-icon {
@@ -75,31 +74,60 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
 }
 
 .address {
-    font-size: 1.7rem;
+    font-size: clamp(1.2rem, 3vw, 1.7rem); /* Responsive font size */
     font-weight: bold;
     color: white;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* More comprehensive media queries for better responsiveness */
+@media (max-width: 992px) {
+    .Hero-Section {
+        padding: 40px 15px;
+    }
 }
 
 @media (max-width: 768px) {
-    .letter {
-        font-size: 2.5rem;
+    .Hero-Section {
+        padding: 30px 10px;
+    }
+    
+    .Location {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .Hero-Section {
+        padding: 20px 10px;
     }
     
     .desc {
-        font-size: 1.2rem;
+        max-width: 95%;
+    }
+}
+
+/* For landscape orientation on mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    .Hero-Section {
+        min-height: 120vh; /* Allow scrolling in landscape */
     }
     
-    .address {
-        font-size: 1.4rem;
+    .Hero-Content {
+        padding: 20px 0;
     }
 }
