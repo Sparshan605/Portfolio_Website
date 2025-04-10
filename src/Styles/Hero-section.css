@@ -4,7 +4,7 @@
     align-items: center;
     padding: 5vh 5vw;
     min-height: 100vh;
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
     overflow: hidden;
     position: relative;
     /* Using viewport units for padding to scale with screen size */
