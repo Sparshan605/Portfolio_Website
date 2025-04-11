@@ -3,7 +3,6 @@
     justify-content:left;
     align-items: center;
     background-color: linear-gradient(135deg, #0b0c1e, #000);;
-    position: fixed;
     top: 0;
     width: 90%;
     z-index: 100;
