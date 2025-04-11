@@ -1,58 +1,62 @@
 .work {
-  padding: 5rem 2rem;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .work-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
   width: 100%;
 }
 
 .work-title {
   color: #ffffff;
-  font-size: 5rem;
+  font-size: clamp(2rem, 8vw, 5rem);
   margin-bottom: 0.5rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .static-title {
-  opacity: 0.3; 
+  opacity: 0.3;
   transition: opacity 0.5s ease;
 }
 
 .subtitle {
   color: #9ca3af;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   margin-top: 0.5rem;
   font-weight: 300;
-  opacity: 0.3; 
+  opacity: 0.3;
   transition: opacity 0.5s ease;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1.5rem, 3vw, 2rem);
   width: 100%;
-  max-width: 90%;
-  /* background:Linear-gradient(135deg, #060713,#000, #000);  */
+  max-width: 1200px;
 }
 
 .work-card {
-  /* background-color: rgba(30, 30, 30, 0.8); */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background:Linear-gradient(135deg, #060713,#000, #000); 
+  background: linear-gradient(135deg, #060713, #000, #000);
 }
 
 .work-card.hovered {
@@ -60,23 +64,35 @@
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 255, 255, 0.2);
 }
+
 .work-card-body ul {
   list-style-type: disc;
-  padding-left: 20px; /* Adds indentation for better visibility */
+  padding-left: clamp(15px, 4vw, 20px);
   color: white;
+  margin-bottom: 1rem;
 }
+
 .work-card-body ol {
-    color: white; /* Adjust to match visibility */
+  color: white;
+  padding-left: clamp(15px, 4vw, 20px);
+  margin-bottom: 1rem;
 }
+
+.work-card-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
 .work-card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  flex-wrap: wrap;
 }
 
 .company-logo {
-  width: 60px;
-  height: 60px;
+  width: clamp(45px, 10vw, 60px);
+  height: clamp(45px, 10vw, 60px);
   object-fit: contain;
   border-radius: 8px;
   margin-right: 1rem;
@@ -86,28 +102,32 @@
 
 .work-info {
   flex: 1;
+  min-width: 0; /* Prevents text overflow issues */
 }
 
 .company-name {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   margin: 0 0 0.2rem 0;
+  word-wrap: break-word;
 }
 
 .position {
   color: #60a5fa;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
   font-weight: 500;
   margin-bottom: 0.2rem;
+  word-wrap: break-word;
 }
 
 .period {
   color: #9ca3af;
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
 }
 
 .work-card-body {
   color: #e5e7eb;
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
 }
 
 .description {
@@ -116,19 +136,19 @@
 }
 
 .skills-container {
-  margin-top: 1rem;
+  margin-top: clamp(0.8rem, 2vw, 1rem);
 }
 
 .skills-title {
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 2vw, 0.9rem);
   margin-bottom: 0.8rem;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .skill-tag {
@@ -136,20 +156,32 @@
   color: #93c5fd;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: clamp(0.7rem, 1.8vw, 0.75rem);
   font-weight: 500;
   display: inline-block;
   border: 1px solid rgba(59, 130, 246, 0.3);
+  margin-bottom: 0.3rem;
 }
 
+/* Tablet Breakpoint */
+@media (max-width: 992px) {
+  .work-container {
+    max-width: 95%;
+  }
+  
+  .work-card-header {
+    margin-bottom: 1rem;
+  }
+}
 
+/* Mobile Breakpoint */
 @media (max-width: 768px) {
   .work {
-    padding: 4rem 1rem;
+    padding: clamp(2rem, 5vw, 4rem) clamp(0.8rem, 2vw, 1rem);
   }
   
   .work-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 6vw, 2rem);
   }
   
   .work-card {
@@ -159,5 +191,65 @@
   .company-logo {
     width: 50px;
     height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills-list {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Small Mobile Breakpoint */
+@media (max-width: 480px) {
+  .work-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .company-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .work-info {
+    width: 100%;
+  }
+  
+  .skill-tag {
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .work {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .work-card-header {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .work-card, .static-title, .subtitle {
+    transition: none;
+  }
+  
+  .work-card.hovered {
+    transform: none;
+  }
+}
+
+/* Ensure proper display on high contrast mode */
+@media (forced-colors: active) {
+  .skill-tag {
+    border: 1px solid CanvasText;
+  }
+  
+  .work-card {
+    border: 1px solid CanvasText;
   }
 }

@@ -4,7 +4,7 @@
     align-items: center;
     padding: 5vh 5vw;
     min-height: 100vh;
-    width: calc(100% - 50px);
+    width: 100%;
     overflow: hidden;
     position: relative;
     /* Using viewport units for padding to scale with screen size */
@@ -17,9 +17,7 @@
     justify-content: center;
     max-width: 1200px; /* Prevents excessive stretching on ultra-wide screens */
     gap: clamp(10px, 2vw, 20px); /* Responsive gap that scales with viewport width */
-    text-align: center; 
-    width: calc(100% - 40px);
-
+    text-align: center;
 }
 
 .Hero-Txt {
