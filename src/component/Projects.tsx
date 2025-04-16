@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
       img: image5,
       title: "Fine-Tuned Joe Rogan LLM",
       description:
-        "A Project of Hugging Face and Unsloth Mistral 7b LLM model to train and fine-tune to data of joe rogan's podcast transcript.It is a large model so It has been trained in google collab and deploying is in process due to hardware problems. ",
+        "A Project of Hugging Face and Unsloth Mistral 7b LLM model Which is fine-tuned and trained in the json dataset of joe rogan's podcast transcript.It is a large model so It has been trained in google collab and deploying is in process due to hardware problems. ",
       tags: ["Unsloth","Python", "Mistral 7b", "Streamlit", "HuggingFace","WandDB"],
       detailsUrl: "",
       githubUrl: "https://github.com/Sparshan605/PodcastAi"
