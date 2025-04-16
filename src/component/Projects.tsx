@@ -4,6 +4,7 @@ import image1 from "../assets/Sentiment_st.png";
 import image2 from "../assets/Iris_st.png";
 import image3 from "../assets/Web_scapper.png";
 import image4 from "../assets/EDA.png";
+import image5 from "../assets/Finetune_LLM.png"
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import AnimatedText from "./animation";
 // If using React Router, uncomment the next line
@@ -29,6 +30,16 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
+      img: image5,
+      title: "Fine-Tuned Joe Rogan LLM",
+      description:
+        "A Project of Hugging Face and Unsloth Mistral 7b LLM model to train and fine-tune to data of joe rogan's podcast transcript.It is a large model so It has been trained in google collab and deploying is in process due to hardware problems. ",
+      tags: ["Unsloth","Python", "Mistral 7b", "Streamlit", "HuggingFace","WandDB"],
+      detailsUrl: "",
+      githubUrl: "https://github.com/Sparshan605/PodcastAi"
+    },
+    {
+      id: 2,
       img: image1,
       title: "Video Sentiment Analysis",
       description:
@@ -38,7 +49,7 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/Sparshan605/Social-Media-Sentiment-Dashboard"
     },
     {
-      id: 2,
+      id: 3,
       img: image2,
       title: "Classifying Iris to Flowers",
       description: "A Machine Learning project that uses trained KNeighbors Classifier to categorize iris flowers into three species (Setosa, Versicolor, and Virginica) based on their sepal and petal measurements. The project includes data preprocessing, model training, evaluation metrics, and displayed in streamlit.",
@@ -47,7 +58,7 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/Sparshan605/IRis_Streamlit"
     },
     {
-      id: 3,
+      id: 4,
       img: image3,
       title: "Web Scrapping",
       description:
@@ -57,7 +68,7 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/Sparshan605/web_scrapping"
     },
     {
-      id: 4,
+      id: 5,
       img: image4,
       title: "Exploratory Data Analysis and Data Preprocessing",
       description:
