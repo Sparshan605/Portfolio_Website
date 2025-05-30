@@ -5,10 +5,10 @@ import image2 from "../assets/Iris_st.png";
 import image3 from "../assets/Web_scapper.png";
 import image4 from "../assets/EDA.png";
 import image5 from "../assets/Finetune_LLM.png"
+import image6 from "../assets/figma.jpg";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import AnimatedText from "./animation";
-// If using React Router, uncomment the next line
-// import { Link } from "react-router-dom";
+
 
 interface Project {
   id: number;
@@ -76,6 +76,16 @@ const Projects: React.FC = () => {
       tags: ["Python", "Matplotlib", "Seaborn", "Data Visualization"],
       detailsUrl: "",
       githubUrl:  "https://github.com/Sparshan605?tab=repositories"
+    },
+    {
+      id: 6,
+      img: image6,
+      title: "Figma Prototyping",
+      description:
+        "A collection of UI/UX design prototypes created using Figma, showcasing various design concepts and user interfaces. These prototypes demonstrate skills in wireframing, prototyping, and user experience design.",
+      tags: ["Figma", "Canva", "Adobe","Prototyping", "UI/UX Design"],
+      detailsUrl: "",
+      githubUrl:  ""
     },
   ];
 
